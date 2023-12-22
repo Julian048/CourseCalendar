@@ -1,0 +1,83 @@
+<!--Starting Information and Instructions-->
+
+<div class ="text">
+    <h2 >Welcome to Course Calendar</h2>
+    <p>This project is an initative of <a href="https://linktr.ee/colorstackbu?utm_source=qr_code">ColorStackBU</a>, a student organization on campus dedicated to supporting POC in Computer Science.</p>
+    <p>If you are interested in social events, professional development events, or technical projects like these feel free to join our discord (LinkTree above) for more information.</p>
+    <p>We have our very own technical project team, StackHacks, that works on projects like this one. Applications for StackHacks open each semester. </p>
+    <br>
+    <h2 >What Course Calendar Can Do</h2>
+    <p>Course Calendar Can:</p>
+    <ul>
+        <li>Place your courses onto your Bmail Google Calendar.</li>
+        <li>Account for academic calendar days off and breaks.</li>
+        <li>Account for academic calendar early dismissals like Passover.</li>
+        <li>Account for all academic calendar "Monday classes meet not Tuesday classes"  days. </li>
+        <li>Place events from the in person academic calendar or online academic calendar on to your Bmail Google Calendar.</li>
+        <li>Update class information on your calendar if you come back and use it again <strong>ONLY IF</strong> there is an official change in the system. Ex. The course room has changed in the system.</li>
+    </ul>
+    <h2 >What Course Calendar CANNOT Do</h2>
+    <p>Course Calendar <strong>CANNOT</strong> do a lot of things. Read below to ensure you understand how it works.</p>
+    <ul>
+        <li>Course Calendar <strong>CANNOT</strong> automatically delete dropped courses from your Google Calendar. You must do that yourself.</li>
+        <li style="color:red;font-weight:bold">Course Calendar <strong>CANNOT</strong> automatically add new courses to your Google Calendar. You must come back and use it again to add any new courses.</li>
+        <li>Course Calendar is only accurate up to the point you used it, the given academic calendar, and the official course schedule.<ul>
+            <li>Course Calendar <strong>CANNOT</strong> update your Google Calendar for class cancellations like snow days, or any other reason.</li>
+            <li>Course Calendar <strong>CANNOT</strong> update your Google Calendar for any professor change or late change to the academic calendar.</li>
+        </ul></li>
+        <li> Course Calendar <strong>CANNOT</strong> add asynchronous classes to your Google Calendar.</li>
+        <li> Course Calendar <strong>CANNOT</strong> be used as an excuse to not attend class.</li>
+        
+    </ul>
+    <br>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Select your options using the "Select Options" button below. The selected semester and courses for that semester will be displayed.</li>
+        <li>Ensure the displayed courses are the ones you intend to add to your Google Calendar.</li>
+        <li>Add your courses to your Google Calendar by pressing the "Post to Google Calendar" button.</li>
+        <li>Enjoy the convenience of not having to do all this Google Calendar work yourself every single semester.</li>
+    </ol>
+    
+    <h2 >For questions, concerns, or to report errors please fill out <a href="https://forms.gle/V4rMsiWjgLXNkemW7 "target=”_blank”>this form</a>. </h2> 
+    
+</div>
+
+<!--Select Options Button-->
+<div class="btn btn-primary select-options-btn">Select Options</div>
+
+<!--Display semester and courses selected-->
+<div class="card mt-4">
+    <h3 class="card-header button-text">{{display_term}}</h3>
+    <div class="card-body">
+        {{course_day_key}}
+        <hr class="solid">
+        <div> <!--Display inperson courses-->
+            <!--for each course in banner_schedule, display it-->
+            {{not_registered_yet}}
+            {{#sync_courses}}
+                {{COURSE}} - {{SUNDAY}}{{MONDAY}}{{TUESDAY}}{{WEDNESDAY}}{{THURSDAY}}{{FRIDAY}}{{SATURDAY}} - {{STARTTIME}} - {{ENDTIME}} - {{BUILDING}} {{ROOM}}<br>
+                <hr class="solid">
+            {{/sync_courses}}
+            {{#async_courses}}
+                {{COURSE}} - This course is asynchronous and will not go on your Google Calendar.<br>
+                <hr class="solid">
+            {{/async_courses}}
+        </div>
+        
+        <div> <!--Display online courses-->
+        
+        </div>
+    </div>
+
+</div>
+
+<!--Actually put courses on Google Calendar-->
+<div id="post_courses_button" class="btn btn-primary post_courses mt-3 button-text">Post To Google Calendar</div>
+
+
+
+<!-- Display JSON just for developer use
+<h3>Academic Calendar (RAW JSON)</h3>
+<pre>{{academic_calendar_json}}</pre>
+
+-->

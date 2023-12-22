@@ -1,0 +1,97 @@
+#semesterSelect,
+#statusSelect{
+    color: #005A43;
+}
+
+.body {
+    text-align:center;
+}
+
+.solid{
+  display: block;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 0.5px;
+}
+
+.button_text {
+    width: 100%;
+}
+.post_courses {
+    margin: 20px 0;
+    transition: background-color 0.3s; /* smooth button hover transition */
+    padding: 15px 30px; /*bigger button*/
+    font-size: 20px;
+    border: 2px solid #777;
+    background-color: #FFFFFF;
+    border-color: #005A43;
+    color:#005A43;
+    width: 100%;
+    }
+    
+.post_courses:hover {
+    background-color: #005A43;
+    border-color: #E1F2DB;
+    color:#FFFFFF;
+}
+
+
+.select-options-btn {
+    margin: 20px 0;
+    transition: background-color 0.3s; /* smooth button hover transition */
+    padding: 15px 30px; /*bigger button*/
+    font-size: 20px;
+    border: 2px solid #777;
+    background-color: #FFFFFF;
+    border-color: #005A43;
+    color:#005A43;
+    width: 100%;
+    }
+    
+.select-options-btn:hover {
+    background-color: #005A43;
+    border-color: #E1F2DB;
+    color:#FFFFFF;
+}
+@media (max-width: 768px) { /*media quieires = adjusting stuff*/
+    .post_courses{
+        font-size: 18px;
+        padding: 12px 24px;
+        border: 2px solid #777;
+        }
+}
+
+
+.card{
+    background-color: #E1F2DB;
+    border-radius: 15px;
+    width: 100%;
+    border-color: #005A43;
+    border-width: 1px;
+    border-style: solid;
+}
+.text{
+    color: black;
+    text-align: left;
+}
+.intro{
+    color: black;
+    text-align:center;
+}
+
+.card-header {
+    padding: 10px;
+    color: #005A43;
+    margin-top: 10px;
+    text-align: center;
+}
+.card-body{
+    padding: 10px;
+    color: #005A43;
+    line-height: 2;
+    text-align: center;
+}
+
